@@ -170,7 +170,7 @@ export function Contact() {
     loading="lazy"
     allowFullScreen
     referrerPolicy="strict-origin-when-cross-origin"
-    className="h-full w-full border-0 grayscale invert-[0.9] sepia-[0.2] opacity-70 transition-all duration-700 hover:grayscale-0 hover:invert-0 hover:opacity-100"
+   className="h-full w-full border-0"
   />
 
   {/* Overlay */}
