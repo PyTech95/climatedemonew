@@ -32,15 +32,15 @@ function App() {
       <main>
         <Hero />
         <About />
-        <Mission />
         <Values />
         <Leadership />
+        {/* <Mission /> */}
         <Services />
-        <Certifications />
         <Projects />
+        <Certifications />
         <Collaborations />
         <WhyMatters />
-        <Community />
+        {/* <Community /> */}
         <Contact />
       </main>
 

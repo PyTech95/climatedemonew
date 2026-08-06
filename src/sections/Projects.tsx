@@ -26,7 +26,7 @@ export function Projects() {
     <section id="projects" className="relative overflow-hidden py-32 md:py-40">
       <div className="mx-auto max-w-7xl px-6">
         <SectionHeading
-          eyebrow="Featured Projects"
+          eyebrow="Projects delivered"
           title={
             <>
               <span className="reveal-mask"><span className="reveal-line">Trusted by leaders</span></span>{' '}

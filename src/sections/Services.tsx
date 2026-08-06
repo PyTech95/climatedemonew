@@ -23,7 +23,7 @@ export function Services() {
 
       <div className="mx-auto max-w-7xl px-6">
         <SectionHeading
-          eyebrow="Sustainability Services"
+          eyebrow="Our Sustainability Services"
           title={
             <>
               <span className="reveal-mask"><span className="reveal-line">A complete suite for</span></span>{' '}

@@ -33,19 +33,21 @@ export function About() {
           {/* Narrative */}
           <div data-reveal="up" className="space-y-6 text-lg leading-relaxed text-soft-white-dim">
             <p>
-              <span className="text-soft-white">Resilient Earth Solutions</span> provides
-              end-to-end sustainability consulting throughout the entire building lifecycle —
-              from concept and design to construction, occupancy, and long-term operations.
+              <span className="text-soft-white">Resilient Earth Solutions</span> We provide end-to-end guidance throughout the building lifecycle—from 
+initial concept and design development through construction, 
+occupancy, and ongoing operations.
             </p>
             <p>
-              We believe a truly sustainable building is not certified once and forgotten. It is
-              nurtured through every phase, with performance verified, people protected, and
-              environmental impact minimized at each step.
+               Our consultants are accredited 
+across all major green building certification frameworks including 
+USGBC LEED, IGBC, GRIHA, EDGE and WiredScore allowing us to tailor 
+our approach to your specific regional requirements, organizational 
+goals, and budget parameters.
             </p>
             <p>
-              Our multidisciplinary team brings together green building specialists, energy
-              engineers, and ESG strategists to guide owners, developers, and occupiers toward
-              outcomes that are measurable, durable, and meaningful.
+              We transform sustainability challenges 
+into opportunities for innovation, differentiation, and long-term value 
+creation.
             </p>
           </div>
 

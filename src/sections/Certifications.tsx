@@ -13,7 +13,7 @@ export function Certifications() {
 
       <div className="mx-auto max-w-7xl px-6">
         <SectionHeading
-          eyebrow="Certifications"
+          eyebrow="Our Credentials"
           title={
             <>
               <span className="reveal-mask"><span className="reveal-line">Ratings we deliver</span></span>{' '}
@@ -45,11 +45,23 @@ export function Certifications() {
                   <BadgeCheck className="h-7 w-7 text-accent-400 transition-transform duration-500 group-hover:scale-110" strokeWidth={1.5} />
                 </div>
                 <h3 className="font-display text-2xl text-soft-white">{cert.name}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-soft-white-dim/70">{cert.full}</p>
-                <p className="mt-3 text-[10px] uppercase tracking-[0.25em] text-accent-300/60">
-                  {cert.desc}
-                </p>
-              </div>
+<p
+  className="
+    mt-6
+    mx-auto
+    max-w-[320px]
+    text-justify
+    text-[15px]
+    leading-7
+    font-light
+    tracking-[0.01em]
+    text-soft-white-dim/80
+    transition-all duration-500
+    group-hover:text-soft-white
+  "
+>
+  {cert.full}
+</p>              </div>
             </motion.div>
           ))}
         </div>

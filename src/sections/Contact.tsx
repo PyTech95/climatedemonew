@@ -36,7 +36,7 @@ export function Contact() {
           data-reveal="lines"
         />
 
-        <div className="mt-16 grid gap-8 lg:grid-cols-[1fr_1.1fr]">
+        <div className="mt-8 grid gap-8 lg:grid-cols-[1fr_1.1fr]">
           {/* Form */}
           <motion.form
             onSubmit={handleSubmit}
@@ -109,41 +109,85 @@ export function Contact() {
 
             <div className="grid gap-4 sm:grid-cols-2">
               <a
-                href={`mailto:${CONTACT.email}`}
-                className="group flex items-center gap-3 rounded-2xl glass p-6 transition-all hover:border-accent-400/30"
-              >
-                <Mail className="h-5 w-5 text-accent-400" strokeWidth={1.5} />
-                <div>
-                  <p className="text-xs uppercase tracking-wider text-accent-300">Email</p>
-                  <p className="mt-1 text-sm text-soft-white-dim">{CONTACT.email}</p>
-                </div>
-              </a>
-              <a
-                href={`tel:${CONTACT.phone}`}
-                className="group flex items-center gap-3 rounded-2xl glass p-6 transition-all hover:border-accent-400/30"
-              >
-                <Phone className="h-5 w-5 text-accent-400" strokeWidth={1.5} />
-                <div>
-                  <p className="text-xs uppercase tracking-wider text-accent-300">Phone</p>
-                  <p className="mt-1 text-sm text-soft-white-dim">{CONTACT.phone}</p>
-                </div>
-              </a>
+  href={`mailto:${CONTACT.emails[0]}`}
+  className="group flex items-start gap-3 rounded-2xl glass p-6 transition-all hover:border-accent-400/30"
+>
+  <Mail
+    className="mt-1 h-5 w-5 text-accent-400"
+    strokeWidth={1.5}
+  />
+
+  <div>
+    <p className="text-xs uppercase tracking-wider text-accent-300">
+      Email
+    </p>
+
+    <div className="mt-2 space-y-2">
+      {CONTACT.emails.map((email) => (
+        <a
+          key={email}
+          href={`mailto:${email}`}
+          className="block text-sm text-soft-white-dim transition-colors hover:text-accent-300"
+        >
+          {email}
+        </a>
+      ))}
+    </div>
+  </div>
+</a><div className="group flex items-start gap-3 rounded-2xl glass p-6 transition-all hover:border-accent-400/30">
+  <Phone
+    className="mt-1 h-5 w-5 text-accent-400"
+    strokeWidth={1.5}
+  />
+
+  <div>
+    <p className="text-xs uppercase tracking-wider text-accent-300">
+      Phone
+    </p>
+
+    <div className="mt-2 space-y-2">
+      {CONTACT.phones.map((phone) => (
+        <a
+          key={phone}
+          href={`tel:${phone.replace(/\s+/g, '')}`}
+          className="block text-sm text-soft-white-dim transition-colors hover:text-accent-300"
+        >
+          {phone}
+        </a>
+      ))}
+    </div>
+  </div>
+</div>
             </div>
 
             {/* Map */}
-            <div className="relative h-64 overflow-hidden rounded-2xl glass">
-              <iframe
-                title="Office location map"
-                src="https://www.openstreetmap.org/export/embed.html?bbox=77.3%2C12.9%2C77.7%2C13.1&layer=mapnik&marker=12.9716%2C77.5946"
-                className="h-full w-full grayscale invert-[0.9] sepia-[0.2] opacity-70"
-                loading="lazy"
-                style={{ border: 0 }}
-              />
-              <div className="pointer-events-none absolute bottom-3 left-3 flex items-center gap-1.5 rounded-full bg-forest-950/70 px-3 py-1.5 backdrop-blur-md">
-                <MapPin className="h-3.5 w-3.5 text-accent-400" />
-                <span className="text-xs text-soft-white">Bengaluru, India — indicative</span>
-              </div>
-            </div>
+          <div className="relative h-64 overflow-hidden rounded-2xl glass">
+  <iframe
+    title="Office location map"
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3507.648842297989!2d77.55959901115324!3d28.460000191793444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cbff7e3f95593%3A0xae2c06dc0dba04ea!2sEldeco%20Mystic%20Greens%20Greater%20Noida!5e0!3m2!1sen!2sin!4v1785990560286!5m2!1sen!2sin"
+    width="100%"
+    height="100%"
+    loading="lazy"
+    allowFullScreen
+    referrerPolicy="strict-origin-when-cross-origin"
+    className="h-full w-full border-0 grayscale invert-[0.9] sepia-[0.2] opacity-70 transition-all duration-700 hover:grayscale-0 hover:invert-0 hover:opacity-100"
+  />
+
+  {/* Overlay */}
+  <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-forest-950/40 via-transparent to-transparent" />
+
+  {/* Location Badge */}
+  <div className="absolute bottom-4 left-4 flex items-center gap-2 rounded-full border border-accent-400/30 bg-forest-950/80 px-4 py-2 backdrop-blur-md">
+    <MapPin
+      className="h-4 w-4 text-accent-400"
+      strokeWidth={1.8}
+    />
+
+    <span className="text-sm text-soft-white">
+      Greater Noida, Uttar Pradesh
+    </span>
+  </div>
+</div>
           </div>
         </div>
       </div>

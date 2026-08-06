@@ -1,10 +1,11 @@
 export const NAV_LINKS = [
-  { label: 'About', href: '#about' },
-  { label: 'Mission', href: '#mission' },
-  { label: 'Values', href: '#values' },
+  { label: 'About us', href: '#about' },
+  { label: 'Our values', href: '#values' },
+  { label: 'Key people', href: '#leadership' },
+  // { label: 'Mission', href: '#mission' },
   { label: 'Services', href: '#services' },
   { label: 'Projects', href: '#projects' },
-  { label: 'Community', href: '#community' },
+  // { label: 'Community', href: '#community' },
   { label: 'Contact', href: '#contact' },
 ];
 
@@ -18,13 +19,7 @@ export const VALUES = [
   { title: 'Trusted Sustainability Partner', desc: 'A confidant through every stage of the building lifecycle.', icon: 'handshake' },
 ] as const;
 
-export const LEADERS = [
-  { name: 'Founder & Director', role: 'Strategy & Vision', bio: 'Guides the firm\'s mission to make sustainability standard practice across the built environment.', initials: 'FD' },
-  { name: 'Associate Director', role: 'Green Building Practice', bio: 'Leads certification programs and technical delivery across LEED, IGBC, GRIHA, and WELL.', initials: 'AD' },
-  { name: 'Vice President', role: 'ESG & Climate', bio: 'Heads ESG strategy, climate action planning, and net-zero roadmap development.', initials: 'VP' },
-  { name: 'Advisory Consultant', role: 'Energy & Performance', bio: 'Specialist in energy modelling, commissioning, and operational performance optimization.', initials: 'AC' },
-  { name: 'Marketing Consultant', role: 'Brand & Communications', bio: 'Shapes the narrative connecting sustainability outcomes with business value.', initials: 'MC' },
-];
+
 
 export const SERVICES = [
   { title: 'Building Commissioning', desc: 'Verified performance from design intent through occupancy.', cat: 'Performance' },
@@ -48,12 +43,11 @@ export const SERVICES = [
 ];
 
 export const CERTIFICATIONS = [
-  { name: 'LEED', full: 'Leadership in Energy & Environmental Design', desc: 'USGBC' },
-  { name: 'IGBC', full: 'Indian Green Building Council', desc: 'CII' },
-  { name: 'GRIHA', full: 'Green Rating for Integrated Habitat Assessment', desc: 'TERI' },
-  { name: 'EDGE', full: 'Excellence in Design for Greater Efficiencies', desc: 'IFC' },
-  { name: 'WELL', full: 'WELL Building Standard', desc: 'IWBI' },
-  { name: 'WiredScore', full: 'Digital Infrastructure Certification', desc: 'WiredScore' },
+  { name: 'USGBC', full: 'The U.S. Green Building Council (USGBC) is a nonprofit organization that supports the development of prosperous, healthy and resilient communities through the transformation of the built environment.', desc: 'USGBC' },
+  { name: 'IGBC', full: 'The Indian Green Building Council (IGBC),established in 2001 under the Confederation of Indian Industry (CII), is India’s premier authority on green building certification—it aims to “enable a sustainable built environment for all” and position India as a global leader in greener construction by 2025–2030', desc: 'CII' },
+  { name: 'GRIHA', full: 'GRIHA is a rating tool that helps people assesses the performance of their building against certain nationally acceptable benchmarks. It evaluates the environmental performance of a building holistically over its entire life cycle, thereby providing a definitive standard for what constitutes a ‘green building’. ', desc: 'TERI' },
+  { name: 'EDGE', full: 'Developed by the International Finance Corporation (IFC) of the World Bank Group, EDGE combines a free web-based design tool, an internationally accepted standard, and a third-party certification system', desc: 'IFC' },
+  { name: 'WiredScore', full: 'WiredScore is a global benchmark for digital connectivity infrastructure, offered by WiredScore Ltd. It evaluates buildings on internet provision, mobile coverage, technology resilience, digital service layers, sustainability readiness, and future-proof infrastructure', desc: 'WiredScore' },
 ];
 
 export const PROJECTS = [
@@ -95,12 +89,84 @@ export const STATS = [
 export const CONTACT = {
   corporate: {
     label: 'Corporate Office',
-    address: '[Corporate office address — to be provided]',
+    address: 'MG 01 B,  2nd Floor, Eldeco Mystic Greens, Omicron I Greater Noida, Uttar Pradesh 201310',
   },
   registered: {
     label: 'Registered Office',
-    address: '[Registered office address — to be provided]',
+    address: 'Mathiya Mohalla, Raj Ghath Buxar, Bihar 802101',},
+   emails: [
+    'verma.ankita91@gmail.com',
+    'rudraenergya22@gmail.com',
+  ],
+
+  phones: [
+    '+91 9971158548',
+    '+91 8904287542',
+  ],
+};
+export const LEADERS = [
+  {
+    name: 'Ankita Verma',
+    role: 'Founder & Director',
+    bio: 'IGBC AP, GRIHA CP, LEED AP',
+    linkedin: 'https://in.linkedin.com/in/ankita-verma-154778216',
   },
-  email: 'contact@resilientearth.solutions',
-  phone: '+91 [phone number — to be provided]',
+  {
+    name: 'Pratishu Kumar',
+    role: 'Associate Director',
+    bio: 'IGBC AP',
+    linkedin: 'https://www.linkedin.com/in/example-profile',
+  },
+  {
+    name: 'Priyadarshi Das',
+    role: 'Vice President, Operations',
+    bio: 'IGBC AP',
+    linkedin: 'https://www.linkedin.com/in/example-profile',
+  },
+  {
+    name: 'Ayush Anand',
+    role: 'Honorary Advisor',
+    bio: 'IGBC AP, SCR',
+    linkedin: 'https://www.linkedin.com/in/example-profile',
+  },
+  {
+    name: 'Pratik Kumar',
+    role: 'Advisory Consultant',
+    bio: 'USGBC Faculty',
+    linkedin: 'https://www.linkedin.com/in/example-profile',
+  },
+  {
+    name: 'Pratisar Singh',
+    role: 'Marketing Consultant',
+    bio: 'IGBC AP',
+    linkedin: 'https://www.linkedin.com/in/example-profile',
+  },
+];
+export const CONTACTF = {
+  corporate: {
+    label: 'Corporate Office',
+    address:
+      'MG 01 B, 2nd Floor, Eldeco Mystic Greens, Omicron I, Greater Noida, Uttar Pradesh 201310',
+  },
+
+  registered: {
+    label: 'Registered Office',
+    address: 'Mathiya Mohalla, Raj Ghath, Buxar, Bihar 802101',
+  },
+
+  emails: [
+    'contact@resilientearth.solutions',
+    'info@resilientearth.solutions',
+  ],
+
+  phones: [
+    '+91 997 115 8548',
+    '+91 890 428 7542',
+  ],
+
+  social: {
+    linkedin: 'https://www.linkedin.com/',
+    twitter: 'https://twitter.com/',
+    instagram: 'https://www.instagram.com/',
+  },
 };
