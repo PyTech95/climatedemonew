@@ -1,0 +1,109 @@
+/* Prisha Boutique — shared design tokens and building blocks (shop + admin). */
+
+@font-face { font-family: "Fraunces"; src: url("/fonts/fraunces-latin-600-normal.woff2") format("woff2"); font-weight: 600; font-display: swap; }
+@font-face { font-family: "Plus Jakarta Sans"; src: url("/fonts/plus-jakarta-sans-latin-400-normal.woff2") format("woff2"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "Plus Jakarta Sans"; src: url("/fonts/plus-jakarta-sans-latin-500-normal.woff2") format("woff2"); font-weight: 500; font-display: swap; }
+@font-face { font-family: "Plus Jakarta Sans"; src: url("/fonts/plus-jakarta-sans-latin-600-normal.woff2") format("woff2"); font-weight: 600; font-display: swap; }
+@font-face { font-family: "Plus Jakarta Sans"; src: url("/fonts/plus-jakarta-sans-latin-700-normal.woff2") format("woff2"); font-weight: 700; font-display: swap; }
+
+:root {
+  --wine: #8e1b45;         /* brand: buttons, links, active states */
+  --wine-dark: #6b1233;
+  --wine-soft: #f9e9ee;
+  --blush: #fdf5f3;        /* tinted page sections */
+  --marigold: #e8a13a;     /* small accents only */
+  --ink: #24161c;
+  --muted: #6b5b62;
+  --line: #ebdde2;
+  --paper: #ffffff;
+  --ok: #1e7b4f;   --ok-soft: #e5f4ec;
+  --warn: #8a5200; --warn-soft: #fff1d6;
+  --bad: #b3261e;  --bad-soft: #fce9e7;
+  --info: #1f5fa8; --info-soft: #e6f0fb;
+  --radius: 10px;
+  --font-display: "Fraunces", "Iowan Old Style", Georgia, serif;
+  --font-body: "Plus Jakarta Sans", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; font-family: var(--font-body); font-size: 1rem; line-height: 1.55; color: var(--ink); background: var(--paper); -webkit-font-smoothing: antialiased; }
+img { display: block; max-width: 100%; }
+h1, h2, h3 { margin: 0; line-height: 1.2; text-wrap: balance; }
+p { margin: 0 0 .8em; }
+p:last-child { margin-bottom: 0; }
+a { color: var(--wine); }
+button, input, select, textarea { font: inherit; color: inherit; }
+:focus-visible { outline: 2px solid var(--wine); outline-offset: 2px; }
+.muted { color: var(--muted); }
+.small { font-size: .88rem; }
+.right { text-align: right; }
+.nowrap { white-space: nowrap; }
+
+/* Buttons */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: .5em;
+  min-height: 46px; padding: .55em 1.3em; border: 1.5px solid var(--wine); border-radius: 999px;
+  background: var(--wine); color: #fff; font-weight: 600; text-decoration: none; cursor: pointer;
+  transition: background-color .15s, border-color .15s, color .15s;
+}
+.btn:hover { background: var(--wine-dark); border-color: var(--wine-dark); }
+.btn[disabled] { opacity: .55; cursor: not-allowed; }
+.btn-line { background: transparent; color: var(--wine); }
+.btn-line:hover { background: var(--wine-soft); border-color: var(--wine); color: var(--wine-dark); }
+.btn-quiet { border-color: var(--line); background: #fff; color: var(--ink); }
+.btn-quiet:hover { background: var(--blush); border-color: var(--muted); }
+.btn-danger { border-color: var(--bad); background: #fff; color: var(--bad); }
+.btn-danger:hover { background: var(--bad-soft); border-color: var(--bad); }
+.btn-sm { min-height: 36px; padding: .3em .95em; font-size: .9rem; }
+.btn-block { width: 100%; }
+.link-btn { padding: 0; border: 0; background: none; color: var(--wine); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
+.icon-btn { display: grid; place-items: center; width: 38px; height: 38px; border: 0; border-radius: 50%; background: transparent; font-size: 1.5rem; line-height: 1; cursor: pointer; }
+.icon-btn:hover { background: var(--blush); }
+
+/* Forms */
+.field { display: block; }
+.field > span { display: block; margin-bottom: 5px; font-weight: 600; font-size: .9rem; }
+.field small { display: block; margin-top: 4px; color: var(--muted); font-size: .84rem; }
+.input, .field input, .field select, .field textarea {
+  width: 100%; min-height: 46px; padding: .55em .8em; border: 1.5px solid var(--line); border-radius: 8px; background: #fff;
+}
+.field textarea { min-height: 84px; resize: vertical; }
+.input:focus, .field input:focus, .field select:focus, .field textarea:focus { outline: none; border-color: var(--wine); box-shadow: 0 0 0 3px rgba(142, 27, 69, .14); }
+.form-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+.form-grid .span-2 { grid-column: span 2; }
+.form-error { margin: 0; padding: .7em 1em; border-radius: 8px; background: var(--bad-soft); color: var(--bad); font-weight: 500; }
+.form-ok { margin: 0; padding: .7em 1em; border-radius: 8px; background: var(--ok-soft); color: var(--ok); font-weight: 500; }
+
+/* Status pills */
+.badge { display: inline-block; padding: .18em .7em; border-radius: 999px; background: var(--blush); color: var(--muted); font-size: .8rem; font-weight: 600; white-space: nowrap; }
+.badge-placed, .badge-ordered { background: var(--info-soft); color: var(--info); }
+.badge-confirmed, .badge-packed, .badge-partial, .badge-pending, .badge-awaiting_payment { background: var(--warn-soft); color: var(--warn); }
+.badge-dispatched, .badge-out, .badge-transit { background: var(--wine-soft); color: var(--wine-dark); }
+.badge-delivered, .badge-received, .badge-paid, .badge-on { background: var(--ok-soft); color: var(--ok); }
+.badge-cancelled, .badge-failed, .badge-refunded, .badge-off { background: var(--bad-soft); color: var(--bad); }
+
+/* Photo frame: the tint shows while a photo loads, or if it cannot load */
+.ph { position: relative; overflow: hidden; border-radius: var(--radius); background: linear-gradient(135deg, #f6e4ea, var(--blush)); }
+.ph img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 20%; }
+
+/* Dialog */
+.modal { width: min(560px, calc(100vw - 24px)); max-height: calc(100vh - 24px); padding: 0; border: 0; border-radius: 14px; box-shadow: 0 24px 70px rgba(36, 22, 28, .3); }
+.modal.wide { width: min(760px, calc(100vw - 24px)); }
+.modal::backdrop { background: rgba(36, 22, 28, .5); }
+.modal-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 16px 20px; border-bottom: 1px solid var(--line); }
+.modal-head h2 { font-size: 1.15rem; }
+.modal-body { padding: 20px; display: grid; gap: 14px; }
+.modal-foot { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 10px; padding-top: 6px; }
+
+.loading, .empty { padding: 48px 16px; text-align: center; color: var(--muted); }
+.error-note { margin: 24px auto; max-width: 520px; padding: 18px; border-radius: var(--radius); background: var(--bad-soft); color: var(--bad); text-align: center; }
+.error-note .btn { margin-top: 12px; }
+
+.toast { position: fixed; left: 50%; bottom: 22px; z-index: 90; transform: translateX(-50%); max-width: calc(100vw - 32px); padding: .7em 1.2em; border-radius: 999px; background: var(--ink); color: #fff; font-weight: 500; font-size: .95rem; box-shadow: 0 10px 30px rgba(36, 22, 28, .3); }
+
+@media (max-width: 560px) {
+  .form-grid { grid-template-columns: minmax(0, 1fr); }
+  .form-grid .span-2 { grid-column: auto; }
+}
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition: none !important; animation: none !important; } }

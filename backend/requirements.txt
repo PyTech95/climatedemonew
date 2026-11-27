@@ -1,0 +1,5 @@
+fastapi>=0.110
+uvicorn[standard]>=0.29
+pymongo[srv]>=4.6
+PyJWT>=2.8
+python-dotenv>=1.0

@@ -1,0 +1,19 @@
+# docker compose up --build   ->  http://localhost:8000  (shop)  and  /admin
+services:
+  mongo:
+    image: mongo:7
+    volumes:
+      - mongo-data:/data/db
+  app:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      MONGO_URL: mongodb://mongo:27017
+      MONGO_DB: prisha_boutique
+      SECRET_KEY: change-me-before-going-live-use-a-long-random-string
+      DEMO_MODE: "true"
+    depends_on:
+      - mongo
+volumes:
+  mongo-data:
